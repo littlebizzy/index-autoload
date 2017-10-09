@@ -3,10 +3,10 @@
 Plugin Name: Index Autoload
 Plugin URI: https://www.littlebizzy.com/plugins/index-autoload
 Description: Adds an index to the autoload in wp_options table via WP-Cron on a daily basis, resulting in a more efficient database and faster site performance.
-Version: 1.0.1
+Version: 1.0.2
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
-License: GPL3
+License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 */
 
@@ -17,8 +17,10 @@ function index_autoload_execute_query() {
   global $wpdb;
   $prefix = $wpdb->prefix;
   $options_table = $prefix . 'options';
-  $query_string = "ALTER TABLE " . $options_table . " ADD INDEX autoload (autoload);";
-  $wpdb->get_results( $query_string );
+  $query_drop = "ALTER TABLE " . $options_table . " DROP INDEX autoload (autoload);";
+  $query_add = "ALTER TABLE " . $options_table . " ADD INDEX autoload (autoload);";
+  $wpdb->get_results( $query_drop );
+  $wpdb->get_results( $query_add );
 }
 add_action( 'index_autoload_cron', 'index_autoload_execute_query' );
 

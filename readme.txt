@@ -17,6 +17,8 @@ Adds an index to the autoload in wp_options table via WP-Cron on a daily basis, 
 
 This function will only "fire" if the database is running > MySQL 5.5 and InnoDB engine is active on the `wp_options` table to avoid messing up MyISAM databases (see reference links).
 
+DO NOT USE yet on PHP 7.1 as it will not uninstall correctly, we are exploring a fix.
+
 #### Compatibility ####
 
 This plugin has been designed for use on LEMP (Nginx) web servers with PHP 7.0 and MySQL 5.7 to achieve best performance. All of our plugins are meant for single site WordPress installs only; for performance and security reasons, we highly recommend against using WordPress Multi-Site for the vast majority of projects.

@@ -10,6 +10,45 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 */
 
+// Avoid script calls via plugin URL
+if (!function_exists('add_action'))
+	die;
+
+// This plugin constants
+define('IDXALD_FILE', __FILE__);
+define('IDXALD_PATH', dirname(IDXALD_FILE));
+define('IDXALD_VERSION', '1.0.3');
+
+/* Init index check */
+add_action('init', 'idxald_init');
+function idxald_init() {
+do_action('idxald_index_check');return;
+	$timestamp = (int) get_option('idxald_timestamp');
+	if (empty($timestamp) || (time() - $timestamp) > 86400) {
+		update_option('idxald_timestamp', time(), true);
+		if (false === wp_next_scheduled('idxald_index_check'))
+			wp_schedule_single_event(time() + 30, 'idxald_index_check');
+	}
+}
+
+add_action('idxald_index_check', 'idxald_index_check');
+function idxald_index_check() {
+	require_once IDXALD_PATH.'/index-alter.php';
+	IDXALD_Alter::instance()->check();
+}
+
+register_uninstall_hook(__FILE__, 'idxald_index_uninstall');
+function idxald_index_uninstall() {
+	require_once IDXALD_PATH.'/index-alter.php';
+	IDXALD_Alter::instance()->remove();
+	delete_option('idxald_timestamp');
+}
+
+
+
+
+
+return;
 /**
 * This function fires the ADD INDEX AUTOLOAD query once a day.
 **/

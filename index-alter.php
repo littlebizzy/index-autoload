@@ -74,14 +74,14 @@ final class IDXALD_Alter {
 		if (!$this->exists()) {
 
 			// Create it
-			$this->create();
+			$this->add();
 
-		// Force to re-generate if exists
+		// Force to re-generate even if the index exists
 		} elseif (defined('IDXALD_REGENERATE') && IDXALD_REGENERATE) {
 
 			// Remove and create it
-			$this->remove();
-			$this->create();
+			$this->drop();
+			$this->add();
 		}
 	}
 
@@ -91,7 +91,8 @@ final class IDXALD_Alter {
 	 * Remove the index
 	 */
 	public function remove() {
-
+		if ($this->exists())
+			$this->drop();
 	}
 
 
@@ -100,6 +101,10 @@ final class IDXALD_Alter {
 	// ---------------------------------------------------------------------------------------------------
 
 
+
+	/**
+	 * Check if the target index exists
+	 */
 	private function exists() {
 
 		// Retrieve indexes
@@ -110,7 +115,17 @@ final class IDXALD_Alter {
 		// Enum and check
 		foreach ($indexes as $index) {
 
+			// Check properties
+			if (!is_object($index) || !isset($index->Key_name) || !isset($index->Column_name))
+				continue;
+
+			// Check index key and column values
+			if ('autoload' == $index->Key_name && 'autoload' == $index->Column_name)
+				return true;
 		}
+
+		// Not exists
+		return false;
 	}
 
 
@@ -118,8 +133,17 @@ final class IDXALD_Alter {
 	/**
 	 * Attemp to create the autoload index
 	 */
-	private function create() {
+	private function add() {
+		$this->wpdb->query('ALTER TABLE '.esc_sql($this->wpdb->options).' ADD INDEX autoload (autoload)');
+	}
 
+
+
+	/**
+	 * Removes the autoload index
+	 */
+	private function drop() {
+		$this->wpdb->query('ALTER TABLE '.esc_sql($this->wpdb->options).' DROP INDEX autoload');
 	}
 
 

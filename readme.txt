@@ -1,6 +1,7 @@
 === Index Autoload ===
 
 Contributors: littlebizzy
+Donate link: https://www.patreon.com/littlebizzy
 Tags: index, autoload, options, wp_options, database
 Requires at least: 4.4
 Tested up to: 4.9

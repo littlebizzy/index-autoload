@@ -7,7 +7,7 @@ Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: IDXALD
@@ -18,9 +18,11 @@ Adds an index to the autoload in wp_options table and verifies it exists on a da
 
 Adds an index to the autoload in wp_options table and verifies it exists on a daily basis (using WP Cron), resulting in a more efficient database.
 
+* [**Patreon (support us with $1/mo)**](https://www.patreon.com/littlebizzy)
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/index-autoload)
 * [Plugin GitHub](https://github.com/littlebizzy/index-autoload)
 * [SlickStack](https://slickstack.io)
+* [Starter](https://starter.littlebizzy.com)
 
 #### The Long Version ####
 
@@ -90,12 +92,14 @@ We invite you to check out a few other related free plugins that our team has al
 
 * [404 To Homepage](https://wordpress.org/plugins/404-to-homepage-littlebizzy/)
 * [CloudFlare](https://wordpress.org/plugins/cf-littlebizzy/)
+* [Delete Expired Transients](https://wordpress.org/plugins/delete-expired-transients-littlebizzy/)
 * [Disable Author Pages](https://wordpress.org/plugins/disable-author-pages-littlebizzy/)
 * [Disable Cart Fragments](https://wordpress.org/plugins/disable-cart-fragments-littlebizzy/)
 * [Disable Embeds](https://wordpress.org/plugins/disable-embeds-littlebizzy/)
 * [Disable Emojis](https://wordpress.org/plugins/disable-emojis-littlebizzy/)
 * [Disable Empty Trash](https://wordpress.org/plugins/disable-empty-trash-littlebizzy/)
 * [Disable Image Compression](https://wordpress.org/plugins/disable-image-compression-littlebizzy/)
+* [Disable jQuery Migrate](https://wordpress.org/plugins/disable-jq-migrate-littlebizzy/)
 * [Disable Search](https://wordpress.org/plugins/disable-search-littlebizzy/)
 * [Disable WooCommerce Status](https://wordpress.org/plugins/disable-wc-status-littlebizzy/)
 * [Disable WooCommerce Styles](https://wordpress.org/plugins/diable-wc-styles-littlebizzy/)
@@ -122,28 +126,18 @@ We invite you to check out a few other related free plugins that our team has al
 
 We invite you to check out a few premium plugins that our team has also produced that you may find especially useful:
 
-* [Purge Them All](https://www.littlebizzy.com/plugins/purge-them-all)
 * [Speed Demon](https://www.littlebizzy.com/plugins/speed-demon)
 * [SEO Genius](https://www.littlebizzy.com/plugins/seo-genius)
 * [Great Migration](https://www.littlebizzy.com/plugins/great-migration)
 * [Security Guard](https://www.littlebizzy.com/plugins/security-guard)
 * [Genghis Khan](https://www.littlebizzy.com/plugins/genghis-khan)
 
-#### Related Services ####
-
-The following paid services are available on a case-by-case basis to upstanding members of the WordPress community:
-
-* [SSL Setup](https://www.littlebizzy.com/services/ssl)
-* [DNSSEC Setup](https://www.littlebizzy.com/services/dnssec)
-* [G Suite Setup](https://www.littlebizzy.com/services/google-apps)
-* [SendGrid Setup](https://www.littlebizzy.com/services/sendgrid)
-* [MailGun Setup](https://www.littlebizzy.com/services/mailgun)
-
 #### Special Thanks ####
 
 We thank the following groups for their generous contributions to the WordPress community which have particularly benefited us in developing our own free plugins and paid services:
 
 * [Automattic](https://automattic.com)
+* [Brad Touesnard](https://bradt.ca)
 * [Daniel Auener](http://www.danielauener.com)
 * [Delicious Brains](https://deliciousbrains.com)
 * [Greg Rickaby](https://gregrickaby.com)
@@ -174,6 +168,9 @@ We released this plugin in response to our managed hosting clients asking for be
 3. Review your database to confirm index exists
 
 == Changelog ==
+
+= 1.0.5 =
+* updated recommended plugins
 
 = 1.0.4 =
 * tested with WP 4.9

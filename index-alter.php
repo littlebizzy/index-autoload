@@ -77,7 +77,7 @@ final class IDXALD_Alter {
 			$this->add();
 
 		// Force to re-generate even if the index exists
-		} elseif (defined('IDXALD_REGENERATE') && IDXALD_REGENERATE) {
+		} elseif (defined('INDEX_AUTOLOAD_REGENERATE') && INDEX_AUTOLOAD_REGENERATE) {
 
 			// Remove and create it
 			$this->drop();

@@ -3,7 +3,7 @@
 Plugin Name: Index Autoload
 Plugin URI: https://www.littlebizzy.com/plugins/index-autoload
 Description: Adds an index to the autoload in wp_options table and verifies it exists on a daily basis (using WP Cron), resulting in a more efficient database.
-Version: 1.0.5
+Version: 1.0.6
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -15,10 +15,14 @@ Prefix: IDXALD
 require_once dirname(__FILE__).'/admin-notices.php';
 IDXALD_Admin_Notices::instance(__FILE__);
 
-
 /**
- * Plugin initialization
+ * Admin Notices Multisite check
+ * Uncomment //return to disable this plugin on Multisite installs
  */
+require_once dirname(__FILE__).'/admin-notices-ms.php';
+if (false !== \LittleBizzy\IndexAutoload\Admin_Notices_MS::instance(__FILE__)) {
+	//return;
+}
 
 // Block direct calls
 if (!function_exists('add_action'))
@@ -27,7 +31,7 @@ if (!function_exists('add_action'))
 // Plugin constants
 define('IDXALD_FILE', __FILE__);
 define('IDXALD_PATH', dirname(IDXALD_FILE));
-define('IDXALD_VERSION', '1.0.5');
+define('IDXALD_VERSION', '1.0.6');
 
 
 

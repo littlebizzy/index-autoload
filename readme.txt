@@ -18,11 +18,16 @@ Adds an index to the autoload in wp_options table and verifies it exists on a da
 
 Adds an index to the autoload in wp_options table and verifies it exists on a daily basis (using WP Cron), resulting in a more efficient database.
 
-* [**Patreon (support us with $1/mo)**](https://www.patreon.com/littlebizzy)
+* [**Join our FREE Facebook group for support!**](https://www.facebook.com/groups/littlebizzy/)
+* [**Worth a 5-star review? Thank you!**](https://wordpress.org/support/plugin/index-autoload-littlebizzy/reviews/?rate=5#new-post)
 * [Plugin Homepage](https://www.littlebizzy.com/plugins/index-autoload)
 * [Plugin GitHub](https://github.com/littlebizzy/index-autoload)
-* [SlickStack](https://slickstack.io)
-* [Starter](https://starter.littlebizzy.com)
+
+*Our related OSS projects:*
+
+* [SlickStack (LEMP stack automation)](https://slickstack.io)
+* [WP Lite boilerplate](https://wplite.org)
+* [Starter Theme](https://starter.littlebizzy.com)
 
 #### The Long Version ####
 
@@ -93,6 +98,7 @@ We invite you to check out a few other related free plugins that our team has al
 * [404 To Homepage](https://wordpress.org/plugins/404-to-homepage-littlebizzy/)
 * [CloudFlare](https://wordpress.org/plugins/cf-littlebizzy/)
 * [Delete Expired Transients](https://wordpress.org/plugins/delete-expired-transients-littlebizzy/)
+* [Disable Admin-AJAX](https://wordpress.org/plugins/disable-admin-ajax-littlebizzy/)
 * [Disable Author Pages](https://wordpress.org/plugins/disable-author-pages-littlebizzy/)
 * [Disable Cart Fragments](https://wordpress.org/plugins/disable-cart-fragments-littlebizzy/)
 * [Disable Embeds](https://wordpress.org/plugins/disable-embeds-littlebizzy/)
@@ -102,7 +108,7 @@ We invite you to check out a few other related free plugins that our team has al
 * [Disable jQuery Migrate](https://wordpress.org/plugins/disable-jq-migrate-littlebizzy/)
 * [Disable Search](https://wordpress.org/plugins/disable-search-littlebizzy/)
 * [Disable WooCommerce Status](https://wordpress.org/plugins/disable-wc-status-littlebizzy/)
-* [Disable WooCommerce Styles](https://wordpress.org/plugins/diable-wc-styles-littlebizzy/)
+* [Disable WooCommerce Styles](https://wordpress.org/plugins/disable-wc-styles-littlebizzy/)
 * [Disable XML-RPC](https://wordpress.org/plugins/disable-xml-rpc-littlebizzy/)
 * [Download Media](https://wordpress.org/plugins/download-media-littlebizzy/)
 * [Download Plugin](https://wordpress.org/plugins/download-plugin-littlebizzy/)
@@ -112,6 +118,7 @@ We invite you to check out a few other related free plugins that our team has al
 * [Force HTTPS](https://wordpress.org/plugins/force-https-littlebizzy/)
 * [Force Strong Hashing](https://wordpress.org/plugins/force-strong-hashing-littlebizzy/)
 * [Google Analytics](https://wordpress.org/plugins/ga-littlebizzy/)
+* [Header Cleanup](https://wordpress.org/plugins/header-cleanup-littlebizzy/)
 * [Index Autoload](https://wordpress.org/plugins/index-autoload-littlebizzy/)
 * [Maintenance Mode](https://wordpress.org/plugins/maintenance-mode-littlebizzy/)
 * [Profile Change Alerts](https://wordpress.org/plugins/profile-change-alerts-littlebizzy/)
@@ -143,6 +150,7 @@ We thank the following groups for their generous contributions to the WordPress 
 * [Greg Rickaby](https://gregrickaby.com)
 * [Matt Mullenweg](https://ma.tt)
 * [Mika Epstein](https://halfelf.org)
+* [Mike Garrett](https://mikengarrett.com)
 * [Samuel Wood](http://ottopress.com)
 * [Scott Reilly](http://coffee2code.com)
 * [Jan Dembowski](https://profiles.wordpress.org/jdembowski)
@@ -154,6 +162,7 @@ We thank the following groups for their generous contributions to the WordPress 
 * [Rahul Bansal](https://profiles.wordpress.org/rahul286)
 * [Roots](https://roots.io)
 * [rtCamp](https://rtcamp.com)
+* [Ryan Hellyer](https://geek.hellyer.kiwi)
 * [WP Chat](https://wpchat.com)
 * [WP Tavern](https://wptavern.com)
 
@@ -170,7 +179,7 @@ We released this plugin in response to our managed hosting clients asking for be
 == Changelog ==
 
 = 1.0.6 =
-* constant spelling is now define('INDEX_AUTOLOAD_REGENERATE', true);
+* constant spelling is now `define('INDEX_AUTOLOAD_REGENERATE', true);`
 * (old spelling no longer supported: `IDXALD_REGENERATE`)
 * added warning to Multisite installations
 * updated recommended plugins

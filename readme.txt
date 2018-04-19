@@ -174,6 +174,7 @@ We released this plugin in response to our managed hosting clients asking for be
 * (old spelling no longer supported: `IDXALD_REGENERATE`)
 * added warning to Multisite installations
 * updated recommended plugins
+* update plugin meta
 
 = 1.0.5 =
 * updated recommended plugins

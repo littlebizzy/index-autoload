@@ -1,7 +1,5 @@
 <?php
 
-// Subpackage namespace
-namespace LittleBizzy\IndexAutoload;
 /**
  * Admin Notices class
  *

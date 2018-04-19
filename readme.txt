@@ -7,7 +7,7 @@ Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: IDXALD
@@ -38,7 +38,7 @@ Note: uninstalling this plugin will remove the index from your autoload options.
 
 Lastly, if you want to force the index to `DROP` and then `ADD` again each day, enable this constant (keep in mind that no other query is performed, such as OPTIMIZE or etc, it is currently just DROP and then ADD again).
 
-    define('IDXALD_REGENERATE', true);
+    define('INDEX_AUTOLOAD_REGENERATE', true);
 
 Please note that the original defined constant no longer works, which allowed you to defined how often the index would be regenerated. This is because 1x daily seems more than enough, and not too often to cause issues. However if you have feedback on these changes, please post on the wp.org forums and tag this plugin in your post.
 
@@ -169,18 +169,25 @@ We released this plugin in response to our managed hosting clients asking for be
 
 == Changelog ==
 
+= 1.0.6 =
+* constant spelling is now define('INDEX_AUTOLOAD_REGENERATE', true);
+* (old spelling no longer supported: `IDXALD_REGENERATE`)
+* added warning to Multisite installations
+* updated recommended plugins
+
 = 1.0.5 =
 * updated recommended plugins
 
 = 1.0.4 =
 * tested with WP 4.9
-* added recommended plugins
-* added rating request
+* added recommended plugins notice
+* added rating request notice
 * added support for `define('DISABLE_NAG_NOTICES', true);`
 
 = 1.0.3 =
 * (once) delete old option `index_autoload_active`
 * (once) remove WP Cron scheduled hook `index_autoload_cron`
+* added supported for `define('IDXALD_REGENERATE', true);`
 * no longer uses `IDXAUTOLOAD_SCHEDULE` constant
 * fix bug calling `wp_unschedule_event`
 * fix bug using constant `IDXAUTOLOAD_SCHEDULE` without checking if defined or not
@@ -193,7 +200,7 @@ We released this plugin in response to our managed hosting clients asking for be
 * index is now dropped before being (re)added as recommended by Percona and to avoid error log buildup
 
 = 1.0.1 =
-* defined constant `IDXAUTOLOAD_SCHEDULE` (optional)
+* added support for defined constant `IDXAUTOLOAD_SCHEDULE`
 * check MySQL > 5.5 and InnoDB before run
 
 = 1.0.0 =

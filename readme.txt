@@ -7,7 +7,7 @@ Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 7.0
 Multisite support: No
-Stable tag: 1.0.6
+Stable tag: 1.1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Prefix: IDXALD
@@ -177,6 +177,11 @@ We released this plugin in response to our managed hosting clients asking for be
 3. Review your database to confirm index exists
 
 == Changelog ==
+
+= 1.1.0 =
+* versioning correct (major changes in 1.0.6)
+* (no code changes)
+* (prior major changes should have also been version bumped, but will retain to avoid too much confusion)
 
 = 1.0.6 =
 * constant spelling is now `define('INDEX_AUTOLOAD_REGENERATE', true);`

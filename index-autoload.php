@@ -3,7 +3,7 @@
 Plugin Name: Index Autoload
 Plugin URI: https://www.littlebizzy.com/plugins/index-autoload
 Description: Adds an index to the autoload in wp_options table and verifies it exists on a daily basis (using WP Cron), resulting in a more efficient database.
-Version: 1.0.6
+Version: 1.1.0
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -31,7 +31,7 @@ if (!function_exists('add_action'))
 // Plugin constants
 define('IDXALD_FILE', __FILE__);
 define('IDXALD_PATH', dirname(IDXALD_FILE));
-define('IDXALD_VERSION', '1.0.6');
+define('IDXALD_VERSION', '1.1.0');
 
 
 

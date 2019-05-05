@@ -7,11 +7,12 @@ Adds an index to the autoload in wp_options table and verifies it exists on a da
 
 ### Defined Constants
 
-    /* Plugin Meta */
+    /** Plugin Meta */
     define('DISABLE_NAG_NOTICES', true);
     
-    /* Index Autoload Functions */
-    define('INDEX_AUTOLOAD_REGENERATE', true);
+    /** Index Autoload Functions */
+    define('INDEX_AUTOLOAD', true); // default = true
+    define('INDEX_AUTOLOAD_REGENERATE', false); // default = false
 
 ### Compatibility
 
